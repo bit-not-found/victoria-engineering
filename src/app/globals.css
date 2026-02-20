@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+/* ─── LIGHT MODE ─────────────────────────────────────────── */
+:root {
+  --background: #ffffff;
+  --foreground: #0f0f0f;
+
+  --primary: #1B3A6B;
+  /* deep navy blue — from Victoria Engineering logo */
+  --primary-foreground: #ffffff;
+
+  --secondary: #f4f4f4;
+  --secondary-foreground: #0f0f0f;
+
+  --card: #ffffff;
+  --card-foreground: #0f0f0f;
+
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #1B3A6B;
+
+  --muted: #f4f4f4;
+  --muted-foreground: #6b6b6b;
+
+  /* Section alternates */
+  --surface-alt: #f9f9f9;
+  /* subtle off-white for alt sections */
+}
+
+/* ─── DARK MODE ──────────────────────────────────────────── */
+.dark {
+  --background: #000000;
+  --foreground: #f0f0f0;
+
+  --primary: #2E6ACF;
+  /* electric navy — pops on black */
+  --primary-foreground: #ffffff;
+
+  --secondary: #111111;
+  --secondary-foreground: #f0f0f0;
+
+  --card: #0d0d0d;
+  --card-foreground: #f0f0f0;
+
+  --border: #222222;
+  --input: #1a1a1a;
+  --ring: #2E6ACF;
+
+  --muted: #111111;
+  --muted-foreground: #888888;
+
+  --surface-alt: #080808;
+}
+
+/* ─── TAILWIND THEME TOKENS ──────────────────────────────── */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --font-sans: var(--font-archivo);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ─── BASE ───────────────────────────────────────────────── */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ─── ANIMATIONS ─────────────────────────────────────────── */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 16px rgba(27, 58, 107, 0.30);
+  }
+
+  50% {
+    box-shadow: 0 0 32px rgba(27, 58, 107, 0.60);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* ─── ENGINEERING GRID ───────────────────────────────────── */
+/* Light: very faint grey lines; Dark: very faint gold lines */
+.engineering-grid {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.dark .engineering-grid {
+  background-image:
+    linear-gradient(rgba(46, 106, 207, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46, 106, 207, 0.06) 1px, transparent 1px);
+}
