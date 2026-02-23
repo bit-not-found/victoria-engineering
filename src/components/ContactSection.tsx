@@ -7,8 +7,8 @@ const contactInfo = [
         icon: <Mail className="w-5 h-5" />,
         title: 'Email Us',
         subtitle: 'For project inquiries & proposals',
-        value: 'info@victoriaengineering.co.za',
-        href: 'mailto:info@victoriaengineering.co.za',
+        value: 'oliver@victoriaengineering.co.za',
+        href: 'mailto:oliver@victoriaengineering.co.za',
     },
     {
         icon: <Phone className="w-5 h-5" />,
@@ -21,7 +21,7 @@ const contactInfo = [
         icon: <MapPin className="w-5 h-5" />,
         title: 'Head Office',
         subtitle: 'Johannesburg, Gauteng',
-        value: ' Spirngs, 1559',
+        value: ' Springs, 1559',
         href: '#',
     },
 ];
