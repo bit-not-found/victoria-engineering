@@ -56,9 +56,9 @@ export function Footer() {
 
                         {/* Contact info — plain links, no icon boxes */}
                         <div className="space-y-2">
-                            <a href="tel:+27110000000" className="flex items-center gap-2 text-muted-foreground hover:text-primary text-sm transition-colors">
+                            <a href="tel:+27663782620" className="flex items-center gap-2 text-muted-foreground hover:text-primary text-sm transition-colors">
                                 <Phone className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                                +27 (0)11 000 0000
+                                +27 66 378 2620
                             </a>
                             <a href="mailto:info@victoriaengineering.co.za" className="flex items-center gap-2 text-muted-foreground hover:text-primary text-sm transition-colors">
                                 <Mail className="w-3.5 h-3.5 text-primary flex-shrink-0" />

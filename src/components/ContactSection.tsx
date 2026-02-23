@@ -14,14 +14,14 @@ const contactInfo = [
         icon: <Phone className="w-5 h-5" />,
         title: 'Call Us',
         subtitle: 'Mon–Fri, 7:30am to 5:00pm',
-        value: '+27 (0)11 000 0000',
-        href: 'tel:+27110000000',
+        value: '+27 66 378 2620',
+        href: 'tel:+27663782620',
     },
     {
         icon: <MapPin className="w-5 h-5" />,
         title: 'Head Office',
         subtitle: 'Johannesburg, Gauteng',
-        value: '1 Engineering Drive, Sandton, 2196',
+        value: ' Spirngs, 1559',
         href: '#',
     },
 ];
